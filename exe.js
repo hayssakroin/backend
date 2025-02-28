@@ -2,38 +2,23 @@ let av1 = 5.0;
 let av2 = 6.0;
 let recup1 = 7.0;
 let recup2 = 3.0;
-let nota1;
-let nota2;
-let media;
-if(av1 > recup1){
-    nota1 = av1
-} else {
-    nota1 = recup1
+
+if (recup1 > av1) {
+    av1 = recup1;
+}
+if (recup2 > av2) {
+    av2 = recup2;
 }
 
-if(av2 > recup2){
-    nota2 = av2
+let media = (av1 + av2) / 2;
+
+let situacao;
+
+if (media >= 6.0) {
+    situacao = "Aprovado";
 } else {
-    nota2 = recup2
+    situacao = "Reprovado";
 }
-media = (nota1 + nota2) /2
-if(nota1 > nota2)
 
-let status = media >= 6.0 ? "Aprovado" : "Reprovado";
-
-
-/* A escola adota uma recuperação para cada avaliação,
-que substitui a nota do aluno caso seja maior que
-sua nota anterior.
-Dada as seguintes notas, calcule a média simples
-do aluno e diga se ele está aprovado ou reprovado,
-levando em consideração a substituição de notas. */
-
-
-
-
-
-
-
-
-// aluno aprovado
+console.log("Média do aluno: " + media);
+console.log("Situação: " + situacao);
